@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <script>
+           const num = [80,90,100,101,2,59,999.9,-1213];
+            smallest_num();
+            largest_num();
+           function smallest_num(){
+            let min = Math.min(...num);
+            document.write(min +`<br>`);
+            }
+           function largest_num(){
+            let max = Math.max(...num);
+            document.write(max);
+            }
+        </script>
+    </body>
+</html>

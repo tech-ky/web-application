@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Combined Form Validation</title>
+    </head>
+    <body>
+        <!-- Survey Form -->
+        <form name="SurveyForm" onsubmit="return validateInputs();">
+            <h2>Survey Form</h2>
+            <table>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" size="35" name="Name" /></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="text" size="35" name="Email" /></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="text" size="35" name="Age" /></td>
+                </tr>
+                <tr>
+                    <td>Course:</td>
+                    <td>
+                        <select name="Course">
+                            <option value="0">SELECT COURSE</option>
+                            <option value="1">DEEE</option>
+                            <option value="2">DCPE</option>
+                            <option value="3">DASE</option>
+                            <option value="4">DEB</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <br />
+            <input type="submit" name="submit" value="Send" />
+            <input type="reset" name="reset" value="Reset" />
+        </form>
+        <hr />
+
+        <!-- Login Form -->
+        <h2>Login Form</h2>
+        <table>
+            <tr>
+                <td>User ID:</td>
+                <td><input type="text" id="uid" onkeyup="validateUserID();" /></td>
+                <td><div id="errUid"></div></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" id="password" onkeyup="validatePassword();" /></td>
+                <td><div id="errPassword"></div></td>
+            </tr>
+        </table>
+        <br />
+        <input type="button" id="login" value="Login" onclick="validateLogin(); finalValidate();" />
+        <div id="errFinal"></div>
+
+        <script>
+            // Survey Form Validation
+            function validateInputs() {
+                var name = document.forms["SurveyForm"]["Name"];
+                var email = document.forms["SurveyForm"]["Email"];
+                var age = document.forms["SurveyForm"]["Age"];
+                var course = document.forms["SurveyForm"]["Course"];
+
+                if (name.value.trim() === "") {
+                    window.alert("Please enter your name");
+                    name.focus();
+                    return false;
+                }
+
+                if (email.value.trim() === "") {
+                    window.alert("Please enter your email");
+                    email.focus();
+                    return false;
+                } else {
+                    var regex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+                    if (!regex.test(email.value)) {
+                        window.alert("Invalid email");
+                        email.focus();
+                        return false;
+                    }
+                }
+
+                if (age.value.trim() === "") {
+                    window.alert("Please enter your age");
+                    age.focus();
+                    return false;
+                } else if (isNaN(age.value)) {
+                    window.alert("Age is not a number");
+                    age.focus();
+                    return false;
+                }
+
+                if (course.selectedIndex < 1) {
+                    window.alert("Please select a course");
+                    course.focus();
+                    return false;
+                }
+
+                // All inputs are valid
+                var msg = name.value.trim() + ", " +
+                          email.value.trim() + ", " +
+                          age.value.trim() + ", " +
+                          course[course.selectedIndex].text;
+                window.alert(msg);
+                return true;
+            }
+
+            // Login Form Validation
+            function validateUserID() {
+                var input = document.getElementById("uid").value;
+                document.getElementById("errUid").innerHTML = "";
+                if (input === "") {
+                    document.getElementById("errUid").innerHTML =
+                        "<span style='color:red'>Please enter your User ID!</span>";
+                    document.getElementById("errFinal").innerHTML = "";
+                }
+            }
+
+            function validatePassword() {
+                var input = document.getElementById("password").value;
+                document.getElementById("errPassword").innerHTML = "";
+                if (input === "") {
+                    document.getElementById("errPassword").innerHTML =
+                        "<span style='color:red'>Please enter your Password!</span>";
+                    document.getElementById("errFinal").innerHTML = "";
+                }
+            }
+
+            function validateLogin() {
+                validateUserID();
+                validatePassword();
+            }
+
+            function finalValidate() {
+                var errors = [];
+                errors[0] = document.getElementById("errUid").innerHTML;
+                errors[1] = document.getElementById("errPassword").innerHTML;
+                var count = 0;
+                for (var i = 0; i < errors.length; i++) {
+                    if (errors[i] === "") {
+                        count++;
+                    }
+                }
+                if (count === errors.length) {
+                    document.getElementById("errFinal").innerHTML =
+                        "<span style='color:green'>All the data you entered is correct!!</span>";
+                }
+            }
+        </script>
+    </body>
+</html>

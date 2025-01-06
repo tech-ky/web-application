@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <script>
+            const marks = [80,77,88,95,68];
+            var sum=0;
+            let grade;
+            for(let i=0;i<marks.length;i++)
+        {
+            sum += marks[i];
+        }
+        const average = sum/marks.length;
+
+        if(average<0){
+            grade="invalid";
+        }else if(average<50)
+        {
+            grade="F";
+        }else if(average<60)
+        {
+            grade="D";
+        }else if(average<70)
+        {
+            grade="C";
+        }else if(average<80)
+        {
+            grade="B";
+        }else if(average<=100)
+        {
+            grade="A";
+        }else{
+            grade="invalid";
+        }
+
+        document.write(`Average Marks : ${average.toFixed(2)}<br>`);
+        document.write(`Grade : ${grade}`);
+
+        </script>
+    </body>
+</html>

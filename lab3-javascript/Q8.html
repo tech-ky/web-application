@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        Quantity: 
+        <select id="quantity" min="1" max="5">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br/>
+
+        Price Per Unit: <br><input type="text" id="PricePerUnit" /> <br/>
+        Discount %:     <br><input type="text" id="Discount"  /> <br/>
+        Tax Rate %:     <br><input type="text" id="TaxRate" /> <br/>
+
+        <br>
+        <input type="button" onclick="calculate()" value="Calculate" />
+
+        <p>The result is: <span id="result"></span></p>
+
+        <script>
+            function calculate(){
+                var quantity = Number(document.getElementById("quantity").value);
+                var pricePerUnit = Number(document.getElementById("PricePerUnit").value);
+                var discount = Number(document.getElementById("Discount").value);
+                var taxRate = Number(document.getElementById("TaxRate").value);
+                
+                // Calculate total price with discount and tax
+                var total = quantity * pricePerUnit;
+                var discountedPrice = total - (total * discount / 100);
+                var finalPrice = discountedPrice + (discountedPrice * taxRate / 100);
+                
+                // Display result
+                document.getElementById("result").innerHTML = finalPrice.toFixed(2);
+            }
+        </script>
+    </body>
+</html>

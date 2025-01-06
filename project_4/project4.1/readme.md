@@ -1,0 +1,1 @@
+learn the basic of css like the color and how to wriye classs and id of inside a css file

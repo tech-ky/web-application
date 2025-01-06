@@ -1,0 +1,23 @@
+body
+{
+background-image: url(ai-generated-nature-landscapes-background-free-photo.jpg);
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: left;
+background-size:cover;
+}
+
+h1
+{
+background:linear-gradient(to top, skyblue,lightgreen);
+background-repeat: no repeat;
+background-attachment: fixed;
+
+}
+
+.you
+{
+    background:linear-gradient(to top, skyblue,lightgreen);
+    background-repeat: no repeat;
+    background-attachment: fixed;
+}

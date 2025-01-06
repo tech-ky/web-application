@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Triangle Area Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: red;
+            }
+            .text {
+               font-size: 3em;
+               font-weight: bolder;
+               font-family: fantasy;
+               margin-left: 30px;
+               margin-right: 30px;
+               padding: 30px;
+            }
+            .input {
+                font-size: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        <img src="Area-of-a-Triangle.jpg" alt="picture of triangle with formulas">
+        <table>
+            <tr>
+                <td class="text">Height:</td>
+                <td class="input"><input id="height" type="text" placeholder="Enter Triangle height"></td>                
+            </tr>
+            <tr>
+                <td class="text">Base:</td>
+                <td class="input"><input id="base" type="text" placeholder="Enter Triangle base length"></td>
+            </tr>
+        </table>
+        <input id="button" type="button" value="Calculate Area">
+        <label id="area" style="display: block; margin-top: 20px; color: white; font-size: 2em;"></label>
+        
+        <script>
+            // Get elements by their IDs
+            const heightInput = document.getElementById("height");
+            const baseInput = document.getElementById("base");
+            const areaLabel = document.getElementById("area");
+            const button = document.getElementById("button");
+
+            // Add event listener to the button
+            button.addEventListener("click", calculate_area);
+
+            // Function to calculate area
+            function calculate_area() {
+                // Convert input values to numbers
+                const height = Number(heightInput.value);
+                const base = Number(baseInput.value);
+
+                // Validate inputs
+                if (isNaN(height) || isNaN(base) || height <= 0 || base <= 0) {
+                    alert("Please enter valid positive numbers for height and base.");
+                } else {
+                    // Calculate and display the area
+                    const area = 0.5 * height * base;
+                    areaLabel.innerHTML = `The area of the triangle is: ${area.toFixed(2)}`;
+                }
+            }
+        </script>
+    </body>
+</html>

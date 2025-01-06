@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table
+            {background-color:grey;
+            border:solid 1px black;
+            width:500px;
+            border-spacing:10px;}
+            
+            td{
+                border-top:solid 1px darkgrey;
+                border-left:solid 1px darkgrey;
+                border-bottom:solid 1px lightgrey;
+                border-right:solid 1px lightgrey;
+            padding:5px;}
+            
+            .last{width:300px;}
+            
+            #row1{background-color:pink;}
+            
+            #orange{
+                background-color:orange;
+            }
+            </style>
+    </head>
+    <body>
+        <table>
+            <tr id="row1">
+                <td colspan="3">
+                    blah
+                </td>
+                <td class="last">
+                    blah
+                </td>
+            </tr>
+            
+            <tr>
+                <td rowspan="2">
+                    blah
+                </td>
+                <td>
+                    blah
+                </td>
+                <td>
+                   blah 
+                </td>
+                <td class="last">
+                    blah
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    blah
+                </td>
+                <td>
+                    blah
+                </td>
+                <td class="last">
+                    blah
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    blah
+                </td>
+                <td id="orange" colspan="2" rowspan="2">
+                    blah
+                </td>
+                <td class="last">
+                    blah
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    blah
+                </td>
+                <td class="last">
+                    blah
+                </td>
+            </tr>
+
+        </table>
+    </body>
+</html>

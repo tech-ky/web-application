@@ -1,0 +1,28 @@
+body
+{
+background-color: aquamarine;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+p
+{
+font-size: x-large;
+}
+#a,#b,#c,#d
+{
+color: blueviolet;
+border-color: black;
+}
+
+hr
+{
+ width: 15px;
+}
+
+.odd
+{
+font-size: xx-large;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+border-width: 10px;
+border-radius: 50px;
+color: #639861;
+}

@@ -1,0 +1,147 @@
+<!-- This is a static web page that displays my hangout with friends -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Trip with Friends</title>
+    <link href='https://fonts.googleapis.com/css?family=Bubblegum Sans' rel='stylesheet'>
+    <style>
+        body {
+            font-family:'Bubblegum Sans';
+            background-color: #b5891b88;
+            color: #e7ca7e;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+        h1 {
+            font-family:'Bubblegum Sans';
+            font-size: 80px;
+            text-align: center;
+            color: #ffffff;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+        p {
+            font-family:'Bubblegum Sans';
+            text-align: center;
+            font-size: 18px;
+            color: #c5ec87;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        .photo {
+            position: relative;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .photo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 30px rgba(0, 0, 0, 0.15);
+        }
+        .photo:hover img {
+            transform: scale(1.05);
+        }
+        .reflection {
+            padding: 15px 20px;
+        }
+        .reflection h3 {
+            font-size: 22px;
+            color: #2c3e50;
+            margin: 10px 0;
+        }
+        .reflection p {
+            font-size: 16px;
+            color: #777;
+            line-height: 1.6;
+        }
+        /* Styling buttons for interaction (optional) */
+        .reflection button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .reflection button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>My Trip with Friends :> </h1>
+
+        <div class="gallery">
+            <!-- Tower -->
+            <div class="photo">
+                <img src="photos/tower.jpg" alt="Light display at the festival">
+                <div class="reflection">
+                    <h3>Mid-Autumn Festival Light Display</h3>
+                    <p>This was one of the best experiences of the trip. We took many Polaroid pictures and spent the day exploring the area. The light show was absolutely mesmerizing.</p>
+                </div>
+            </div>
+
+            <!-- Ice Cream -->
+            <div class="photo">
+                <img src="photos/ice_cream.jpg" alt="Ice cream with waffles">
+                <div class="reflection">
+                    <h3>Ice Cream Waffle</h3>
+                    <p>The portion was huge, shared among three of us! The strawberry and vanilla combination was so tasty. It was beautifully topped with flowers and osmanthus jelly. Definitely a must-try again!</p>
+                </div>
+            </div>
+
+            <!-- Toast -->
+            <div class="photo">
+                <img src="photos/toast.jpg" alt="Toast at a cafe">
+                <div class="reflection">
+                    <h3>Cafe Hopping</h3>
+                    <p>Though we slightly exceeded our budget, the food was absolutely worth it! A memorable experience at a cozy cafe.</p>
+                </div>
+            </div>
+
+            <!-- Book Store -->
+            <div class="photo">
+                <img src="photos/book_store.jpg" alt="Bookstore adventure">
+                <div class="reflection">
+                    <h3>Exploring a Bookstore</h3>
+                    <p>We spent hours browsing through a quaint little bookstore. I loved the cozy vibe and found some interesting reads.</p>
+                </div>
+            </div>
+
+            <!-- Group Picture -->
+            <div class="photo">
+                <img src="photos/group_pic.jpg" alt="Group picture">
+                <div class="reflection">
+                    <h3>Group Picture</h3>
+                    <p>Here's a group photo of all of us, capturing a moment of laughter and fun. It's always great to make memories together.</p>
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </div>
+</body>
+</html>

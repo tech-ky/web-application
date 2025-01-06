@@ -1,0 +1,33 @@
+body{
+    margin :10px;
+}
+
+.box1
+{
+border:10px dotted;
+width:500px;
+height:500px;
+font-size:50px;
+background-color: aqua;
+padding:50px;
+}
+
+.box2
+{
+border:10px dotted;
+width:500px;
+height:500px;
+font-size:50px;
+background-color: rgb(80, 60, 131);
+margin:50%;
+}
+
+.box3
+{
+border:10px dotted;
+width:500px;
+height:500px;
+font-size:50px;
+background-color: rgb(179, 169, 95);
+margin:50px;
+}

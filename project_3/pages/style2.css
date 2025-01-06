@@ -1,0 +1,103 @@
+/* Global Styles */
+body {
+    font-family: 'Bubblegum Sans', sans-serif;  /* Unified font style */
+    background-color: #1e272e;  /* Dark background for consistency */
+    color: #e7e7e7;  /* Light color for text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+header li {
+    list-style-type: none;
+    margin: 0;
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+/* Headings */
+h1 {
+    font-size: 70px;  /* Consistent heading size */
+    color: #f7b731;  /* Bright yellow for headings */
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  /* Added shadow for more contrast */
+}
+
+h3 {
+    font-size: 28px;
+    color: #f7b731;  /* Same yellow for sub-headings */
+    margin-top: 20px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 18px;
+    color: #f1f2f6;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Language Containers */
+.language-container {
+    background-color: #485460;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.language-container img {
+    width: 100px;  /* Unified smaller image size */
+    margin-bottom: 20px;
+}
+
+.language-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);  /* More hover effects */
+}
+
+/* Links */
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: #3498db;  /* Bright blue for links */
+    padding: 10px 20px;
+    border-radius: 25px;
+    background-color: #2d98da;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+a:hover {
+    background-color: #0c2461;
+    color: #ffffff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 50px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+}

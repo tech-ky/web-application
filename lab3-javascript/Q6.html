@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        write a para :<textarea id="text"></textarea><br>
+        write a word :<input id="word" type="text">  <br>  
+        <input onclick=check() type=button id="submit" value="go"></input>
+        <script>
+            const P=document.getElementById("text");
+            const W=document.getElementById("word");
+            function check(){
+                const para=P.value;
+                const word=W.value;
+                let index =0;
+                var occurance=0;
+                while(true){
+                    index = para.indexOf(word,index);
+                if (index !== -1)
+                {
+                    occurance++;
+                    index += word.length;
+                }
+                else{
+                    document.write(`number of occurance is ${occurance}`);
+                    break;
+                }
+                }
+            }
+        </script>
+    </body>
+</html>

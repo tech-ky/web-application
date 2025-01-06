@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+
+        </style>
+    </head>
+    <body>
+        Enter your number you want to count : 
+        <input type="text" id="input">
+        <input type="submit" id="button">
+        <script>
+            const input = document.getElementById("input");
+            
+            document.getElementById("button").onclick = function()
+        {
+            var i =Number(input.value);
+            if(isNaN(i)||i<0){
+                window.alert("please enter a positive integer");
+            }
+            else{
+            for(Number = 0;Number<i+1;Number++)
+            {
+                document.write(`${Number} is `);
+               if(Number%2===0)
+               {
+                   document.write(`even<br>`);
+               }
+               else
+               {
+                   document.write(`odd<br>`);
+               }
+            }
+        }
+    }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+body{
+
+    font-family: "Pixelify Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background: linear-gradient(black,green);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    margin: 0; 
+}
+
+#box {
+width: 500px;                
+height: 500px;               
+border: 2px solid white; 
+background: linear-gradient(black,green);    
+border-radius: 5px;     
+padding:20px;
+margin:20px;
+}
+
+#box:hover {
+    width: 550px;
+    height: 550px;
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+#box:active {
+    background: linear-gradient(black, rgb(0, 5, 0)); /* Darker green on active */
+}
+
+#box2
+{
+    position: absolute;   
+    
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+p, h1 {
+    text-align: center;
+    color: aliceblue;
+    position: relative;
+    padding:10px;
+    font-size: 2em;
+}
+
+

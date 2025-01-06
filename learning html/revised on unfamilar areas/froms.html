@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <body>
+    <ol typy="1">
+    <li>
+        <form>
+            Your name <input type="text" size="10" maxlength="50" value="Your name">
+        </form>
+        <hr>
+    </li>
+
+    <li>
+        <form>
+            Gender<br>
+            <input type="radio" value="M" name="gender" >Male
+            <input type="radio" value="F" name="gender">Female
+        </form>
+        <hr>
+    </li>
+
+    <li>
+        <form>
+            Movies you have watched<br>
+            <input type="checkbox" value="starwars" name="movies">Star Wars
+            <input type="checkbox" value="lordoftherings" name="movies">Lord of The Rings
+            <input type="checkbox" value="narnia" name="movies" >Narnia
+            <input type="checkbox" value="harrypotter" name="movies">Harry Potter
+            </form>
+        <hr>
+    </li>
+
+    <li>
+        <form>
+            Enter your password:
+            <input type="password" name="pass" size="10" maxlength="10" />
+        </form>
+        <hr>
+    </li>
+
+    <li>
+        <form action=“search.jsp” method=“post”>
+            Search: <input type="text" name="search">
+            <input type="submit" value="Go" />
+        </form>
+        <hr>
+    </li>
+
+    <li>
+        <form>
+            Your name: <input type="text">
+            <input type="submit" value="Register"><input type="reset">
+        </form>
+        <hr>
+    </li>
+
+    <li>
+        <form action=“submit.jsp” method=“post”>
+            Your name: <input type="text">
+            <input type="image" src="submit.gif" border="0">
+            </form>
+        <hr>
+    </li>
+    <li>
+        <form>
+            No of books purchased <input type="text" name="qty">
+            <input type="button" value="Calculate Total Cost" name="calculator"
+            onclick="calculateTotalCost()"/>
+            </form>
+        <hr>
+    </li>
+
+    <li><form>
+        No of books purchased:
+        <input type=“text” name=“qty”>
+        <input type=“hidden” value=“4.50” name=“cost”>
+        <input type=“submit”>
+        </form><hr></li>
+    <li><form>
+        Your comments:
+        <textarea name="comments" rows="3" cols="50">Pls type your
+        comments
+        </textarea>
+        </form><hr></li>
+    <li><form>
+        <select name="Gender">
+        <option value="M">Male</option>
+        <option value="F" selected>Female</option>
+        </select>
+        </form>
+        <hr></li>
+    </ol>
+
+    </body>
+</html>

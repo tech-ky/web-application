@@ -1,0 +1,14 @@
+h1{
+    border-top-style:dashed;
+    border-bottom-style:dashed;
+    border-width: 20px;
+    border-color: yellowgreen;
+}
+
+p{
+    border-style:outset;
+    border-width:5px;
+    border-color:silver;
+    border-radius: 15px;
+    padding:10px
+}

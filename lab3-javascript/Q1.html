@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Triangle Area Calculator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        Enter base:<input type="text"id="base"><br>
+        Enter height:<input type="text"id="height"><br>
+        Enter width:<input type="text"id="width"><br>
+        <input type="submit"id="button"><br>
+        the area is :<label id="area"></label><br>
+        <script>
+            // Get elements by their IDs
+            const height = document.getElementById("height");
+            const base = document.getElementById("base");
+            const area = document.getElementById("area");
+            const width = document.getElementById("width");
+            const button = document.getElementById("button");
+
+            // Add event listener to the button
+            button.addEventListener("click", calculate_area);
+
+            // Function to calculate area
+            function calculate_area() {
+                const b = Number(base.value);
+                const h = Number(height.value);
+                const w = Number(width.value);
+
+                // Validate inputs
+                if (isNaN(h) || isNaN(b) || h <= 0 || b <= 0 || w<=0 || isNaN(w) ) 
+                {
+                    alert("Please enter valid positive numbers.");
+                } else {
+                    // Calculate and display the area
+                    const a = 0.5 * h * b;
+                    area.innerHTML = `The area of the triangle is: ${a.toFixed(2)}`;
+                }
+            }
+        </script>
+    </body>
+</html>
